@@ -1,0 +1,202 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+bold {
+  font-weight: 900;
+  font-family: "Basic-Black";
+}
+
+@font-face {
+  font-family: "Basic";
+  src: local("Amelia-Basic"),
+    url("../assets/fonts/Amelia-Basic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Basic-Black";
+  src: local("Amelia-Basic-Black"),
+    url("../assets/fonts/Amelia-Basic-Black.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Basic-BlackItalic";
+  src: local("Amelia-Basic-BlackItalic"),
+    url("../assets/fonts/Amelia-Basic-BlackItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Basic-Bold";
+  src: local("Amelia-Basic-Bold"),
+    url("../assets/fonts/Amelia-Basic-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Basic-BoldItalic";
+  src: local("Amelia-Basic-BoldItalic"),
+    url("../assets/fonts/Amelia-Basic-BoldItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Basic-Italic";
+  src: local("Amelia-Basic-Italic"),
+    url("../assets/fonts/Amelia-Basic-Italic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Basic-Light";
+  src: local("Amelia-Basic-Light"),
+    url("../assets/fonts/Amelia-Basic-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Basic-LightItalic";
+  src: local("Amelia-Basic-LightItalic"),
+    url("../assets/fonts/Amelia-Basic-LightItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Basic-Oblicua";
+  src: local("Amelia-Basic-Oblicua"),
+    url("../assets/fonts/Amelia-Basic-Oblicua.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Basic-Oblicua-Light";
+  src: local("Amelia-Basic-Oblicua-Light"),
+    url("../assets/fonts/Amelia-Basic-Oblicua-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Basic-OblicuaBlack";
+  src: local("Amelia-Basic-OblicuaBlack"),
+    url("../assets/fonts/Amelia-Basic-OblicuaBlack.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Basic-OblicuaBold";
+  src: local("Amelia-Basic-OblicuaBold"),
+    url("../assets/fonts/Amelia-Basic-OblicuaBold.ttf") format("truetype");
+}
+
+body {
+  font-family: "Basic";
+}
+
+form {
+  display: flex;
+}
