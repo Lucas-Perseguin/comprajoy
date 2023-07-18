@@ -7,6 +7,7 @@ import { Container } from "../../Container";
 export default function UserDataForm({ setDisplay, setUserData, userData }) {
   const [cellphone, setCellphone] = useState("");
   const [name, setName] = useState("");
+  const [surname, setSurname] = useState("");
   const [email, setEmail] = useState("");
   const [city, setCity] = useState("");
 
@@ -17,6 +18,7 @@ export default function UserDataForm({ setDisplay, setUserData, userData }) {
       setName(localData.name);
       setEmail(localData.email);
       setCity(localData.city);
+      setSurname(localData.surname);
     }
   }, []);
 
@@ -29,7 +31,7 @@ export default function UserDataForm({ setDisplay, setUserData, userData }) {
   }
 
   return (
-    <Container height={"1000px"} hdScreen={"800px"} mobileScreen={"600px"}>
+    <Container height={"1200px"} hdScreen={"900px"} mobileScreen={"760px"}>
       <div
         style={{
           display: "flex",
@@ -43,11 +45,19 @@ export default function UserDataForm({ setDisplay, setUserData, userData }) {
           <bold>Seus dados pessoais para contato</bold>
         </h1>
         <Input
-          label="Nome Completo"
+          label="Nome"
           type="text"
-          placeholder="Seu nome completo"
+          placeholder="Seu primeiro nome"
           onChange={(e) => setName(e.target.value)}
           value={name || ""}
+          style={{ width: "640px" }}
+        />
+        <Input
+          label="Sobrenome"
+          type="text"
+          placeholder="Seu sobrenome"
+          onChange={(e) => setSurname(e.target.value)}
+          value={surname || ""}
           style={{ width: "640px" }}
         />
         <Input
@@ -83,13 +93,13 @@ export default function UserDataForm({ setDisplay, setUserData, userData }) {
             if (!isValidEmail(email) || !parseInt(cellphone.length, 10) >= 13)
               return toast.error("Valores Inválidos!");
 
-            if (!(email && city && name && cellphone)) {
+            if (!(email && city && name && cellphone && surname)) {
               return toast.error("Todos os valores devem estar preenchidos");
             }
-            setUserData({ name, cellphone, email, city });
+            setUserData({ name, surname, cellphone, email, city });
             localStorage.setItem(
               "userData",
-              JSON.stringify({ name, cellphone, email, city })
+              JSON.stringify({ name, surname, cellphone, email, city })
             );
             setDisplay((prev) => prev + 1);
           }}

@@ -12,6 +12,8 @@ export default function InternalEmail(props) {
         <Text>
           Nome: {userData.name}
           <br />
+          Sobrenome: {userData.surname}
+          <br />
           Email: {userData.email}
           <br />
           Número para contato: {userData.cellphone}
