@@ -29,7 +29,6 @@ export default function useGlobal() {
     cellphone: "",
     email: "",
     city: "",
-    surname: "",
   });
 
   const [param, setParam] = useState(

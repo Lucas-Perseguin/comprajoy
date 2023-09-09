@@ -16,7 +16,7 @@ export async function sendForm(values, userData, extra, extraGames) {
     render(<CustomerEmail />),
   ]);
   const [internalHtml, customerHtml] = promises;
-  await api.post("/api/email", {
+  await api.post("/email", {
     recipient: userData.email,
     recipientName: userData.name,
     internalHtml,
