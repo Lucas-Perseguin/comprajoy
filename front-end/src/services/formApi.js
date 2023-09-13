@@ -2,6 +2,7 @@ import { render } from "@react-email/render";
 import api from "./api";
 import InternalEmail from "../Components/Email/InternalEmail";
 import CustomerEmail from "../Components/Email/CustomerEmail";
+import axios from "axios";
 
 export async function sendForm(values, userData, extra, extraGames) {
   const promises = await Promise.all([
@@ -16,7 +17,7 @@ export async function sendForm(values, userData, extra, extraGames) {
     render(<CustomerEmail />),
   ]);
   const [internalHtml, customerHtml] = promises;
-  await api.post("/api/email", {
+  await axios.post("https://comprajoy.com.br/api/email", {
     recipient: userData.email,
     recipientName: userData.name,
     internalHtml,
