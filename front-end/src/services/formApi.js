@@ -17,7 +17,7 @@ export async function sendForm(values, userData, extra, extraGames) {
     render(<CustomerEmail />),
   ]);
   const [internalHtml, customerHtml] = promises;
-  await axios.post("https://comprajoy.com.br/api/email", {
+  await axios.post("http://comprajoy.com.br/api/email", {
     recipient: userData.email,
     recipientName: userData.name,
     internalHtml,
